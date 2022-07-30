@@ -1,0 +1,51 @@
+package com.vtiger.Practice;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import com.google.protobuf.Duration;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Hdfcbank_Apply 
+{
+	public static void main(String[] args) throws Throwable 
+	{	
+	WebDriverManager.chromedriver().setup();
+	ChromeOptions co = new ChromeOptions();
+	co.addArguments("--disable-notifications");
+	WebDriver driver = new ChromeDriver(co);
+	driver.manage().window().maximize();
+	
+//	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	
+	driver.navigate().to("https://www.hdfcbank.com/");
+//	Thread.sleep(3000);
+	driver.findElement(By.xpath("//img[@class='closeSummer']")).click();
+//	Thread.sleep(3000);
+	driver.findElement(By.xpath("(//button[@aria-label='Close'])[2]")).click();
+//	Thread.sleep(3000);
+	
+	driver.findElement(By.xpath("//a[.='Select Product Type']")).click();
+//	Thread.sleep(3000);
+	
+	List<WebElement> Allops = driver.findElements(By.xpath("//ul[@class='dropdown1 dropdown-menu']"));
+	System.out.println(Allops.size());
+	
+	for(int i=0; i<=Allops.size()-1; i++)
+	{
+		if(Allops.get(i).getText().contains("Accounts"))
+		{
+			Allops.get(i).click();
+			break;
+		}
+	}
+	
+	
+	}
+}

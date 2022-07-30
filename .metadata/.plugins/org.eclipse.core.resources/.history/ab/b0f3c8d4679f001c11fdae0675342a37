@@ -1,0 +1,22 @@
+package First;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+public class Demo 
+ {
+
+	public static void main(String[] args) throws InterruptedException 
+	{
+		System.setProperty("webdriver.gecko.driver","D:\\Java Practice\\Automation\\Drivers\\geckodriver.exe");
+		WebDriver driver=new FirefoxDriver();
+		driver.get("https://www.youtube.com/");
+		driver.manage().window().maximize();
+		String expectedTitle="YouTube";
+		String actualTitle="driver.getTitle()";
+		Thread.sleep(3000);
+
+	}
+
+ }

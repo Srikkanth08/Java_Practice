@@ -1,0 +1,23 @@
+package Programs_On_Arrays;
+
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
+
+public class Remove_Duplicates_Of_An_Array 
+{
+	public static void main(String[] args) 
+	{
+		ArrayList<Integer> a = new ArrayList<>();
+		a.add(21);
+		a.add(42);
+		a.add(18);
+		a.add(16);
+		a.add(8);
+		a.add(8);
+		a.add(18);
+		
+		LinkedHashSet<Integer> link = new LinkedHashSet<>(a);
+		System.out.println(link);
+		
+	}
+}

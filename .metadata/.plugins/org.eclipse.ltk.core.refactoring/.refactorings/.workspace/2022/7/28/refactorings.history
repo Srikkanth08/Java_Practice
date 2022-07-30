@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;Free_CRM_BDD_FrameWork&apos; to &apos;Cucumber_Free_CRM_BDD_FrameWork&apos;&#x0D;&#x0A;- Original element: &apos;Free_CRM_BDD_FrameWork&apos;&#x0D;&#x0A;- Renamed element: &apos;Free_CRM_BDD_FrameWork&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;Free_CRM_BDD_FrameWork&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=Free_CRM_BDD_FrameWork" name="Cucumber_Free_CRM_BDD_FrameWork" references="true" stamp="1657355184755" version="1.0"/>
+</session>

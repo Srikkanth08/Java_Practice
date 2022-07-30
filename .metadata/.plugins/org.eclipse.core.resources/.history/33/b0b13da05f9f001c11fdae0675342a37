@@ -1,0 +1,48 @@
+package First;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ActitimeLoginTest 
+{
+	public static void main(String[] args) throws InterruptedException 
+	{
+		System.setProperty("webdriver.chrome.driver","./Drivers/chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		//Maximize
+		driver.manage().window().maximize();
+		//enter the text URL
+		driver.get("https://demo.actitime.com/login.do");
+		String expectedTitle="actiTIME - Login";
+		String actualTitle="driver.getTitle()";
+		if(actualTitle.equals(expectedTitle))
+		{
+			System.out.println("Login page is displayed,PASS");
+		}
+		else
+		{
+			System.out.println("Login page is Not displayed,FAIL");
+		}
+		Thread.sleep(6000);
+		//step-2
+		WebElement un=driver.findElement(By.id("username"));
+		un.sendKeys("admin");	
+		driver.findElement(By.name("pwd")).sendKeys("manager");
+		driver.findElement(By.xpath("//div[text()='Login ']")).click();
+		
+		String expectedHomeTitle="actiTIME -  Enter Time-Track";
+		String actualHomeTitle="driver.getTitle()";
+		if(actualHomeTitle.equals(expectedHomeTitle))
+		{
+			System.out.println("Home page is displayed,PASS");
+		}
+		else
+		{
+			System.out.println("Home page is Not displayed,FAIL");
+		}
+		Thread.sleep(6000);
+		driver.close();
+	}
+}

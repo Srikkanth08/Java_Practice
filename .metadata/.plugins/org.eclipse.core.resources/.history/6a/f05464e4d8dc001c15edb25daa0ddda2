@@ -1,0 +1,21 @@
+package Interviw_Programs;
+
+public class String_Reverse 
+{
+	public static void main(String args[])
+	{
+	/*	String S1 = "Test Yantra";
+		String S = "";
+		for(int i=S1.length()-1; i>=0 ; i--)
+		{
+			S = S + S1.charAt(i);
+		}
+		System.out.println("Reverse Of a String is : "+ S);  */
+		
+		String S1 = "Test Yantra";
+		String S = "";
+		StringBuffer Sb = new StringBuffer();
+		Sb.append(Sb);
+		StringBuffer rev = Sb.reverse();
+	}
+}

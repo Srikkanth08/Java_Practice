@@ -1,0 +1,10 @@
+package Programs_On_Arrays;
+
+public class Charcter_Array 
+{
+	public static void main(String[] args) 
+	{
+	char ch[] = {'s','r','i','k','a','n','t','h'};
+	System.out.println("Printing of character Array: "+ch[]);
+	}
+}

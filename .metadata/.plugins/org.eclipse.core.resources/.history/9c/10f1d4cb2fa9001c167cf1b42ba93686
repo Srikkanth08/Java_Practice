@@ -1,0 +1,16 @@
+package First;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class ScrollingDown
+{
+	public static void main(String[] args) throws InterruptedException 
+	{
+		System.setProperty("webdriver.chrome.driver", ".//Drivers//geckodriver.exe");
+		//1. Upcasting from firefox Driver class to WebDriver Interface
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://www.selenium.dev/downloads/");
+		Thread.sleep(2000);
+	}
+}
